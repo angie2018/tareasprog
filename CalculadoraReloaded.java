@@ -61,10 +61,7 @@ public class CalculadoraReloaded extends javax.swing.JFrame {
         jButtonIgual = new javax.swing.JButton();
         jMenuBarPrincipal = new javax.swing.JMenuBar();
         jMenuArchivo = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
         jMenu5 = new javax.swing.JMenu();
 
         jMenuItem4.setText("jMenuItem4");
@@ -295,14 +292,6 @@ public class CalculadoraReloaded extends javax.swing.JFrame {
             }
         });
 
-        jMenuItem1.setText("Editar");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
-            }
-        });
-        jMenuArchivo.add(jMenuItem1);
-
         jMenuItem3.setText("Salir");
         jMenuItem3.setToolTipText("Salir de la app");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
@@ -313,19 +302,6 @@ public class CalculadoraReloaded extends javax.swing.JFrame {
         jMenuArchivo.add(jMenuItem3);
 
         jMenuBarPrincipal.add(jMenuArchivo);
-
-        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/16/book-edit.png"))); // NOI18N
-        jMenu1.setText("Editar");
-
-        jMenuItem2.setText("Internal");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
-            }
-        });
-        jMenu1.add(jMenuItem2);
-
-        jMenuBarPrincipal.add(jMenu1);
 
         jMenu5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/16/help.png"))); // NOI18N
         jMenu5.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -352,21 +328,6 @@ public class CalculadoraReloaded extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        // TODO add your handling code here:
-        ventanaDialogo ventana = new ventanaDialogo();
-        ventana.setVisible(true);
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
-
-    private void jMenuArchivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuArchivoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuArchivoActionPerformed
-
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        // TODO add your handling code here:
-        System.exit(0);
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jButtonIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonIgualActionPerformed
         // TODO add your handling code here:
@@ -429,7 +390,9 @@ public class CalculadoraReloaded extends javax.swing.JFrame {
             resultado = numero * -1;
         else 
             resultado = 0.0;
+        
         jTxtResultados.setText(Double.toString(resultado));
+        resultado = 0.0;
     }//GEN-LAST:event_jButtonSignoActionPerformed
 
     private void jButtonSumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSumaActionPerformed
@@ -732,12 +695,14 @@ public class CalculadoraReloaded extends javax.swing.JFrame {
         ventana.setVisible(true);
     }//GEN-LAST:event_jMenu5MouseClicked
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+    private void jMenuArchivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuArchivoActionPerformed
         // TODO add your handling code here:
-        unJInternalFrame internal = new unJInternalFrame();
-        internal.setVisible(true);
-        add(internal);
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    }//GEN-LAST:event_jMenuArchivoActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -798,13 +763,10 @@ public class CalculadoraReloaded extends javax.swing.JFrame {
     private javax.swing.JButton jButtonSigno;
     private javax.swing.JButton jButtonSuma;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenuArchivo;
     private javax.swing.JMenuBar jMenuBarPrincipal;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
