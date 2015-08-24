@@ -7,7 +7,7 @@ package tareasprog;
 
 /**
  *
- * @author gerardo.valenciano
+ * @author aydeeth
  */
 public class CalculadoraReloaded extends javax.swing.JFrame {
     double resultado = 0.0;
